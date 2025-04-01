@@ -1,0 +1,99 @@
+.about-container {
+    max-width: 700px; // Keep it compact but wide enough
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #1a1a2e, #16213e);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    display: block; // Ensures the container expands naturally
+
+    h1 {
+        font-size: 2rem;
+        color: maroon;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+        color: rgb(230, 230, 230);
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .experience {
+        margin-top: 30px;
+
+        h2 {
+            font-size: 1.8rem;
+            color: maroon;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+
+        .edu-box {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            opacity: 0.9;
+
+            &:hover {
+                transform: scale(1.03);
+                opacity: 1;
+                box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.25);
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                color: #fff;
+                text-transform: capitalize;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: #f1f1f1;
+            }
+        }
+    }
+}
+
+// Responsive Design (Dynamic)
+@media screen and (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        .experience {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .edu-box {
+                padding: 12px;
+
+                h3 {
+                    font-size: 1.1rem;
+                }
+
+                p {
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+}

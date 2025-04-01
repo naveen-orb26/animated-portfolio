@@ -1,0 +1,69 @@
+@import "../../app.scss";
+
+.flame-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+
+    // Hide cursor completely on mobile
+    @include mobile {
+        display: none;
+    }
+}
+
+/* 🎯 Custom Circular Pointer (Transparent with Circumference) */
+.custom-pointer {
+    position: absolute;
+    width: 30px; // Bigger circle
+    height: 30px;
+    border: 2px solid rgba(200, 200, 200, 0.8); // Greyish-white outline
+    border-radius: 50%;
+    background: transparent; // Fully transparent
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(200, 200, 200, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: transform 0.05s ease-out;
+
+    // Hide cursor on mobile
+    @include mobile {
+        display: none;
+    }
+}
+
+/* 🔥 Flame Particle Effect */
+.flame-particle {
+    position: absolute;
+    background: radial-gradient(circle, rgba(255, 180, 0, 1) 10%, rgba(255, 100, 0, 0.9) 50%, rgba(255, 0, 0, 0.6) 90%);
+    border-radius: 50%;
+    filter: blur(15px);
+    transform: translate(-50%, -50%);
+    animation: flameFade 0.9s ease-out forwards, flicker 0.15s infinite alternate;
+}
+
+/* 🔥 Fade & Flicker Effects */
+@keyframes flameFade {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1.4);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.8);
+    }
+}
+
+@keyframes flicker {
+    from {
+        filter: blur(10px);
+    }
+    to {
+        filter: blur(20px);
+    }
+}
