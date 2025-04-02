@@ -1,4 +1,4 @@
-import "./TechCarousel.scss";
+import "./techCarousel.scss";
 import { useEffect, useRef } from "react";
 
 const techStacks = [
