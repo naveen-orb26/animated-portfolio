@@ -11,6 +11,7 @@ const About = () => {
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }}>
                 I am a passionate developer with a keen interest in software development, AI, and technology innovation. My journey started with curiosity, and now I aim to build impactful solutions.
             </motion.p>
+            
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }}>
                 Currently pursuing my BTech, I continuously explore new technologies, work on exciting projects, and enhance my skills to create meaningful contributions to the tech community.
             </motion.p>

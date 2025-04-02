@@ -10,7 +10,7 @@ const Navbar = () => {
             animate={{opacity:1, scale: 1}} 
             transition={{duration:0.5}}>Naveen</motion.span>
         <div className ="social" >
-            <a href="https://www.facebook.com/login.php"><img src="/facebook.png" alt=""/></a>  {/*add github, linkedin */}
+            <a href="https://www.facebook.com/login.php"><img src="/facebook.png" alt=""/></a>  
             <a href="https://github.com/naveen-orb26"><img src="/github.png" alt=""/></a>
             <a href="https://www.instagram.com/2_naveen5/"><img src="/instagram.png" alt=""/></a>
             <a href="https://www.linkedin.com/in/naveen-b-s"><img src="/linkedIn.png" alt=""/></a>

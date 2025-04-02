@@ -5,12 +5,12 @@ const FlameCursor = () => {
   const [particles, setParticles] = useState([]);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
 
-  // Update cursor position
+  
   useEffect(() => {
     const updateCursor = (e) => {
       setCursorPos({ x: e.clientX, y: e.clientY });
       
-      for (let i = 0; i < 3; i++) { // Generate multiple flame particles
+      for (let i = 0; i < 5; i++) { 
         createParticle(e.clientX + Math.random() * 10 - 5, e.clientY + Math.random() * 10 - 5);
       }
     };
@@ -19,13 +19,13 @@ const FlameCursor = () => {
     return () => window.removeEventListener("mousemove", updateCursor);
   }, []);
 
-  // Generate flame particles
+  
   const createParticle = (x, y) => {
     const newParticle = {
       id: Math.random(),
       x,
       y,
-      size: Math.random() * 20 + 10, // Random size between 10px and 30px
+      size: Math.random() * 20 + 10, 
       opacity: 1,
     };
 
@@ -33,18 +33,16 @@ const FlameCursor = () => {
 
     setTimeout(() => {
       setParticles((prev) => prev.filter((p) => p.id !== newParticle.id));
-    }, 900); // Flame effect lasts for 0.9s
+    }, 900); 
   };
 
   return (
     <div className="flame-cursor">
-      {/* Custom Circular Pointer */}
+     
       <div
         className="custom-pointer"
         style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}
       />
-
-      {/* Flame Effect */}
       {particles.map((particle) => (
         <div
           key={particle.id}

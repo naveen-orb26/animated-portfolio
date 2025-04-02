@@ -13,8 +13,12 @@ const Parallax = ({ type }) => {
     const yBg = useTransform(scrollYProgress, [0, 1],["0%","100%"]);
 
     return (
-        <div className="parallax" ref={ref} style={{background: type ==="services" ? "Linear-gradient(180deg, #111132, #0c0c1d)" 
-        : "linear-gradient(180deg, #111132, #505064)" }}>
+        <div className="parallax" 
+        ref={ref} 
+        style={{background: type ==="services" ? "Linear-gradient(180deg, #111132, #0c0c1d)" 
+        : "linear-gradient(180deg, #111132, #505064)" 
+            }
+        }>
             
             <motion.h1 style={{y: yText }}>{type==="services" ? "Ongoing Works" : "Completed Works" }</motion.h1>
             

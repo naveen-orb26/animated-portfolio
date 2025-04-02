@@ -6,17 +6,17 @@
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
-    background: linear-gradient(180deg, #0c0c1d, #111132); /* Gradient background */
-    background-size: 400% 400%; /* For smooth background movement */
-    animation: gradientMove 10s ease infinite; /* Animated gradient */
+    background: linear-gradient(180deg, #0c0c1d, #111132); 
+    background-size: 400% 400%; 
+    animation: gradientMove 10s ease infinite; 
     color: white;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-/* Heading animation - Letters appear one by one */
+
 h2 {
     font-size: 72px;
     margin-bottom: 20px;
@@ -32,7 +32,7 @@ h2 {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Target individual letters */
+
 h2 span {
     display: inline-block;
     opacity: 0;
@@ -45,7 +45,7 @@ h2 span {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Delay each letter animation */
+
 h2 span:nth-child(1) { animation-delay: 0s; }
 h2 span:nth-child(2) { animation-delay: 0.1s; }
 h2 span:nth-child(3) { animation-delay: 0.2s; }
@@ -57,7 +57,7 @@ h2 span:nth-child(8) { animation-delay: 0.7s; }
 h2 span:nth-child(9) { animation-delay: 0.8s; }
 h2 span:nth-child(10) { animation-delay: 0.9s; }
 
-/* Carousel Section */
+
 .tech-carousel {
     overflow: hidden;
     white-space: nowrap;
@@ -67,53 +67,43 @@ h2 span:nth-child(10) { animation-delay: 0.9s; }
     mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
 }
 
-/* Scrolling Icons */
+
 .scroll-content {
     display: flex;
-    gap: 60px; /* More spacing between icons */
+    gap: 60px; 
     animation: scroll 30s linear infinite;
     width: max-content;
 }
 
-/* Tech Icons */
+
 .tech-logo {
-    width: 200px; /* 2x size */
+    width: 200px;
     height: 200px;
     transition: transform 0.3s ease-in-out;
 }
 
-/* JavaScript logo - Apply blue color filter */
+
 .tech-logo[src*="js.svg"] {
     filter: hue-rotate(200deg) saturate(2);
 }
 
-/* Icon hover effect */
+
 .tech-logo:hover {
     transform: scale(1.1);
 }
 
-/* Scrolling Animation */
+
 @keyframes scroll {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
 }
 
-/* Animated Gradient Background */
+
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Subtle Noise Texture */
-.tech-carousel-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/sandstone.png');
-    opacity: 0.1;
-    pointer-events: none;
-}
+
+

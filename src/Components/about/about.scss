@@ -1,5 +1,5 @@
 .about-container {
-    max-width: 700px; // Keep it compact but wide enough
+    max-width: 700px; 
     margin: auto;
     padding: 20px;
     text-align: center;
@@ -7,7 +7,7 @@
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease-in-out;
-    display: block; // Ensures the container expands naturally
+    display: block; 
 
     h1 {
         font-size: 2rem;
@@ -65,7 +65,7 @@
     }
 }
 
-// Responsive Design (Dynamic)
+
 @media screen and (max-width: 768px) {
     .about-container {
         padding: 20px;
